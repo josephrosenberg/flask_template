@@ -1,3 +1,4 @@
+import os # to run to the port
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -23,4 +24,4 @@ def pig_latin():
 #     return render_template('hello.html', name=name)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 3000)),debug=True)
