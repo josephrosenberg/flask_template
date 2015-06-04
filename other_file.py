@@ -1,2 +1,3 @@
 def otherFileFunction(stuff):
-	return "you passed in: %" %(stuff)
+	print "you passed in: %" %(stuff)
+	return stuff

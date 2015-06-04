@@ -14,7 +14,7 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def handle_input():
-	form1 = makeUpper(request.form['inp1'])
+	form1 = otherFileFunction(request.form['inp1'])
 	form2 = request.form['inp2']
 	return render_template('results.html', temp1=form1, temp2=form2)
 
